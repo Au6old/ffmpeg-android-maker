@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # AFFect: audio-only build
-EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-avdevice --disable-swscale --disable-hwaccels --disable-doc --disable-programs"
-EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-encoders --enable-encoder=aac,flac,vorbis,opus,libmp3lame,pcm_s16le,pcm_s24le,pcm_f32le,pcm_s32le,alac,wavpack,mp2,pcm_u8,pcm_alaw,pcm_mulaw"
+EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-avdevice --disable-swscale --disable-hwaccels --disable-doc --disable-programs --disable-network"
+EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-encoders --enable-encoder=aac,flac,vorbis,libopus,libmp3lame,pcm_s16le,pcm_s24le,pcm_f32le,pcm_s32le,alac,wavpack,mp2,pcm_u8,pcm_alaw,pcm_mulaw"
 EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-decoders --enable-decoder=mp3,mp3float,aac,aac_fixed,flac,vorbis,opus,pcm_s16le,pcm_s24le,pcm_f32le,pcm_s32le,alac,wavpack,wmav1,wmav2,wmavoice,wmalossless,ape,ac3,eac3,dts,mp2,amrnb,amrwb,pcm_u8,pcm_alaw,pcm_mulaw,adpcm_ima_wav,gsm,speex,truehd,mlp"
 EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-filters --enable-filter=afade,aresample,volume,loudnorm,dynaudnorm,atrim,aecho,equalizer,bass,treble,highpass,lowpass,bandpass,acompressor,atempo,silencedetect,silenceremove,amix,anlmdn,agate,pan,channelmap,anull,aformat,asetrate,apad,amerge,asplit,adelay,aloop,aeval,afftdn,abuffer,abuffersink"
-EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-muxers --enable-muxer=mp3,adts,ipod,flac,ogg,wav,aiff,matroska,mp4,tta,null,amr,gsm"
+EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-muxers --enable-muxer=mp3,adts,ipod,flac,ogg,opus,wav,aiff,matroska,mp4,tta,null,amr,gsm"
 EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-demuxers --enable-demuxer=mp3,aac,mov,flac,ogg,wav,aiff,matroska,ape,tta,wavpack,dts,ac3,eac3,asf,rm,amr,gsm,concat,truehd,dsf"
 EXTRA_BUILD_CONFIGURATION_FLAGS="$EXTRA_BUILD_CONFIGURATION_FLAGS --disable-protocols --enable-protocol=file,pipe,fd"
 
